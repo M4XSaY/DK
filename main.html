@@ -41,16 +41,25 @@
         .menu li.active {
             background-color: #ffa500;
         }
+
+        a {
+            display: inline-block;
+            text-align: center;
+            color: white; /* Цвет текста ссылки */
+            text-decoration: none; /* Убираем подчеркивание */
+            border-radius: 5px; /* Закругленные углы у ссылки */
+            transition: background-color 0.3s; /* Плавный переход цвета фона при наведении */
+        }
     </style>
 </head>
 <body>
 
     <!-- Меню -->
     <ul class="menu">
-        <li data-value="Кружок рисования «Разноцветный мир»">Кружок рисования «Разноцветный мир»</li>
-        <li data-value="Танцевальный кружок «Анмар»">Танцевальный кружок «Анмар»</li>
-        <li data-value="Кружок игры на гитаре">Кружок игры на гитаре</li>
-        <li data-value="Хор ветеранов">Хор ветеранов</li>
+        <li data-value="Кружок рисования «Разноцветный мир»"><a href="drawing.html">Кружок рисования «Разноцветный мир»</a></li>
+        <li data-value="Танцевальный кружок «Анмар»"><a href="dance.html">Танцевальный кружок «Анмар»</a></li>
+        <li data-value="Кружок игры на гитаре"><a href="guitar.html">Кружок игры на гитаре</a></li>
+        <li data-value="Хор ветеранов"><a href="choir.html">Хор ветеранов</a></li>
     </ul>
 
     <!-- Скрипт для выбора активного пункта -->
