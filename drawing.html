@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>Кружок рисования «Разноцветный мир»</title>
     <style>
-        <style>
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
@@ -33,9 +32,9 @@
         }
 
         .circle {
-            margin-bottom: 30px;
-            border: 1px solid #ccc;
-            padding: 15px;
+            margin-bottom: 0px;
+            border: 0px solid #ccc;
+            padding: 0px;
             border-radius: 10px; /* Закругленные углы для круга */
             background-color: #f9f9f9; /* Светлый фон для круга */
         }
@@ -48,18 +47,42 @@
 
         a {
             display: inline-block;
-            margin-top: 20px; /* Отступ сверху для ссылки */
+            margin-top: 0px; /* Отступ сверху для ссылки */
             text-align: center;
             padding: 10px 15px; /* Отступы вокруг текста ссылки */
             background-color: #d5006d; /* Цвет фона ссылки */
             color: white; /* Цвет текста ссылки */
             text-decoration: none; /* Убираем подчеркивание */
-            border-radius: 5px; /* Закругленные углы у ссылки */
+            border-radius: 10px; /* Закругленные углы у ссылки */
             transition: background-color 0.3s; /* Плавный переход цвета фона при наведении */
         }
 
         a:hover {
             background-color: #ff4081; /* Более яркий цвет при наведении */
+        }
+
+        .container {
+            font-family: 'Arial', sans-serif;
+            display: flex; /* Используем Flexbox для выравнивания элементов */
+            align-items: center; /* Центрируем элементы по вертикали */
+            justify-content: space-between; /* Распределяем пространство между элементами */
+            padding: 0px 10px; /* Добавляем отступы для контейнера */
+        }
+        button {
+            background-color: #d5006d;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            width: 200px;
+            transition: background-color 0.3s;
+            margin: 0px;
+            justify-content: right;
+            display: block;
+            height: 43px;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #ff4081;
         }
     </style>
 </head>
@@ -81,7 +104,50 @@
         <div class = "circle">
         <img src="https://rdk-an.rzn.muzkult.ru/media/2024/05/17/1328589781/xYN5ndRqmq0.jpg" alt="Кружок рисования">
         </div>
-        <p><a href="main.html">Назад к меню кружков</a></p>
+        <div class="container">
+            <p><a href="main.html">Назад к меню кружков</a></p>
+            <button id="sendButton">Записаться</button>
+        </div>
     </div>
+
+    <script>
+        const botToken = '7892687213:AAGtsx1KDgvBIg0Pr-NXTJJNA1iefqMN2To';
+        const chatId = '753014973';
+    
+        document.getElementById('sendButton').addEventListener('click', function() {
+            const formData = JSON.parse(sessionStorage.getItem('formData'));
+            if (!formData) {
+                alert("Нет данных для отправки.");
+                return;
+            }
+    
+            const message = `Заявка в кружок рисования "Разноцветный мир"!\nИмя: ${formData.firstName}\nФамилия: ${formData.lastName}\nТелефон: ${formData.phone}\nПочта: ${formData.email}`;
+    
+            fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    chat_id: chatId,
+                    text: message
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.ok) {
+                    alert("Запись успешно отправлена!");
+                    localStorage.removeItem('formData'); // Очистка сохраненных данных
+                } else {
+                    alert("Произошла ошибка при отправке записи. Пожалуйста, попробуйте еще раз.");
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert("Произошла ошибка при отправке записи. Пожалуйста, попробуйте еще раз.");
+            });
+        });
+    </script>
+
 </body>
 </html>
