@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Структура МБУК «РДК»</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: rgba(64, 68, 66, 0.233);
+        }
+        img {
+            border-radius: 80px; 
+            border: 0px solid #000; 
+            object-fit: cover;
+        }
+        .back-button {
+            position: absolute; /* Абсолютное позиционирование */
+            bottom: 20px; /* Отступ от нижней части экрана */
+            background-color: #636363; /* Серый цвет фона */
+            color: white; /* Цвет текста */
+            border: none; /* Убираем рамку */
+            padding: 10px 20px; /* Отступы внутри кнопки */
+            border-radius: 5px; /* Скругление углов кнопки */
+            cursor: pointer; /* Указатель при наведении */
+        }
+        .back-button:hover {
+            background-color: #414141; /* Темнее при наведении */
+        }
+    </style>
+</head>
+<body>
+    <img src="https://rdk-an.rzn.muzkult.ru/media/2024/03/29/1326740502/struktura.png" alt="Структура МБУК «РДК»">
+    <button class="back-button" onclick="window.location.href='main_menu.html';">Назад</button>
+</body>
+</html>

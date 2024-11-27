@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сельские Дома Культуры и Автоклубы</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .center {
+            margin: 20px 0;
+        }
+        .organization {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 10px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .position {
+            font-weight: bold;
+            color: #007BFF;
+        }
+        .address, .email {
+            font-style: italic;
+            color: #555;
+        }
+        .schedule {
+            margin-top: 10px;
+        }
+
+        .back-button {
+            position: fixed;
+            bottom: 20px; /* Отступ от нижней части экрана */
+            background-color: #636363; /* Серый цвет фона */
+            color: white; /* Цвет текста */
+            border: none; /* Убираем рамку */
+            padding: 10px 20px; /* Отступы внутри кнопки */
+            border-radius: 5px; /* Скругление углов кнопки */
+            cursor: pointer; /* Указатель при наведении */
+        }
+        .back-button:hover {
+            background-color: #414141; /* Темнее при наведении */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Сельские Дома Культуры и Автоклубы</h1>
+
+    <div class="organization">
+        <div class="center"><strong>ОСП Благовский СДК</strong></div>
+        <div class="address">391255, Рязанская область, Александро-Невский район, с. Благие, ул. Центральная д. 2</div>
+        <div class="position">Заведующий</div>
+        <div>Кузьмичёва Светлана Васильевна</div>
+        <div class="schedule">График работы: вторник-суббота с 09:00 до 17:00 и с 20:00 до 23:00 (зимой); с 09:00 до 16:00 и с 19:00 до 22:00 (летом).</div>
+        <div>Выходной: понедельник.</div>
+        <div>Обеденный перерыв: с 13:00 до 14:00</div>
+        <div class="email">Эл. почта: svetlana.cuzmicheva2017@yandex.ru</div>
+    </div>
+
+    <div class="organization">
+        <div class="center"><strong>ОСП Боровковский СДК</strong></div>
+        <div class="address">391250, Рязанская область, Александро-Невский район, с. Сергиевский Боровок, ул. Центральная д. 92</div>
+        <div class="position">Ведущий методист</div>
+        <div>Раджабова Татьяна Анатольевна</div>
+        <div class="schedule">График работы: вторник-пятница с 09:00 до 16:00, суббота с 13:00 до 16:00; с 19:00 до 22:00, воскресенье с 09:00 до 13:00.</div>
+        <div>Выходной: понедельник.</div>
+        <div>Перерыв на обед: с 12:00 до 13:00</div>
+        <div class="email">Эл. почта: borovkovskiy.sdk.65@mail.ru</div>
+    </div>
+
+    <div class="organization">
+        <div class="center"><strong>ОСП Борисовский СДК</strong></div>
+        <div class="address">391243, Рязанская область, Александро-Невский район, д. Борисовка, ул. Центральная д. 105а</div>
+        <div class="position">Заведующий</div>
+        <div>Головко Сергей Александрович</div>
+        <div class="schedule"><div>График работы: вторник-пятница, воскресенье с 13:00 до 16:00 и с 18:00 до 21:00, суббота с 14:00 до 17:00 и с 19:00 до 22:00 (зимой);</div> 
+            <div>вторник-пятница, воскресенье с 13:00 до 16:00 и с 18:00 до 21:00, суббота с 14:00 до 17:00 и с 20:00 до 23:00 (летом).</div></div>
+        <div>Выходной: понедельник.</div>
+        <div>Перерыв на обед: с 12:00 до 13:00</div>
+        <div class="email">Эл. почта: bor-sdk@mail.ru</div>
+    </div>
+
+    <div class="organization">
+        <div class="center"><strong>ОСП Бурминский СДК</strong></div>
+        <div class="address">391247, Рязанская область, Александро-Невский район, д. Бурминка, ул. Молодежная, д. 6А</div>
+        <div class="position">Ведущий методист</div>
+        <div>Малиновская Мария Романовна</div>
+        <div class="schedule">График работы: вторник – воскресенье с 13:00 до 16:00</div>
+        <div>Выходной: понедельник.</div>
+    </div>
+
+    <div class="organization">
+        <div class="center"><strong>ОСП Зимаровский СДК</strong></div>
+        <div class="address">391244, Рязанская область, Александро-Невский район, с. Зимарово, ул. Заречная д. 50</div>
+        <div class="position">Ведущий методист</div>
+        <div>Ушакова Татьяна Алексеевна</div>
+        <div class="schedule">График работы: вторник-четверг, воскресенье с 10:00 до 16:00, пятница, суббота с 10:00 до 13:00 и с 19:00 до 22:00 (зимой); 
+            <div>вторник-четверг, воскресенье с 10:00 до 16:00, пятница, суббота с 10:00 до 13:00 и с 20:00 до 23:00 (летом).</div></div>
+        <div>Выходной: понедельник.</div>
+        <div class="email">Эл. почта: zimarovosdk@yandex.ru</div>
+    </div>
+
+    <div class="organization">
+        <div class="center"><strong>ОСП Калининский СДК</strong></div>
+        <div class="address">391251, Рязанская область, Александро-Невский район, с. Калинино, ул. Молодёжная д. 1а</div>
+        <div class="position">Заведующий</div>
+        <div>Перчик Оксана Равиловна</div>
+        <div class="schedule">График работы: вторник – четверг, воскресенье с 10:00 до 13:00, с 14:00 до 17:00, пятница-суббота с 11:00 до 14:00, с 20:00 до 23:00</div>
+        <div>Выходной: понедельник.</div>
+        <div>Перерыв на обед: с 13:00 до 14:00</div>
+        <div class="email">Эл. почта: aksanaperchik@yandex.ru</div>
+    </div>
+
+    <div class="organization">
+        <div class="center"><strong>ОСП Каширинский СДК</strong></div>
+        <div class="address">391246, Рязанская область, Александро-Невский район, п. Каширин, ул. Школьная д. 2</div>
+        <div class="position">Заведующий</div>
+        <div>Коваленко Светлана Николаевна</div>
+        <div class="schedule">График работы: понедельник-пятница с 8:00 до 17:00, перерыв на обед с 12:00 до 13:00.</div>
+        <div>Выходной: суббота, воскресенье</div>
+        <div class="email">Эл. почта: b12.01.64@mail.ru</div>
+    </div>
+
+    <div class="organization">
+        <div class="center"><strong>ОСП Ленинский СДК</strong></div>
+        <div class="address">391245, Рязанская область, Александро-Невский район, с. Ленино, ул. Центральная д. 43</div>
+        <div class="position">Ведущий методист</div>
+        <div>Черемисина Любовь Григорьевна</div>
+        <div class="schedule">График работы: вторник-четверг с 09:00 ч. до 12:00 ч. и с 14.00 ч. до 17.00 ч., 
+            <div>пятница, суббота с 09:00 ч. до 12:00 и с 19:00 до 22:00 - в зимний период с сентября по май;</div>
+            <div>вторник-четверг с 09:00 ч. до 12:00 ч. и с 14.00 ч. до 17.00 ч., </div>
+            <div>пятница, суббота с 09:00 ч. до 12:00 и с 20:00 до 23:00 – в летнее время.</div>
+            <div>Выходной: понедельник.</div></div>
+        <div class="address">391240, Рязанская область, Александро-Невский район, р.п. Александро-Невский, ул. Советская, д. 27</div>
+        <div class="position">Заведующий</div>
+        <div>Аксенов Николай Юрьевич</div>
+        <div class="education">Образование: высшее, Московский государственный университет культуры и искусств</div>
+        <div class="email">Эл. почта:lenino_sdk@mail.ru</div>
+    </div>
+
+    <div class="organization">
+        <div class="center"><strong>ОСП Нижнеякимецкий СДК</strong></div>
+        <div class="address">391240, Рязанская область, Александро-Невский район, с. Нижний Якимец, ул. Молодёжная д. 17</div>
+        <div class="position">Ведущий методист</div>
+        <div>Морозова Фатима Сергеевна</div>
+        <div class="schedule">График работы: вторник-четверг с 09:00 до 16:00 и с 19:00 до 22:00 (зимой); с 09:00 до 16:00 и с 20:00 до 23:00 (летом).</div>
+        <div>Выходной: понедельник.</div>
+        <div>Перерыв на обед: с 12:00 до 13:00</div>
+        <div class="email">Эл. почта: nizhneyakimetsky.sdk@yandex.ru</div>
+    </div>
+
+    <div class="organization">
+        <div class="center"><strong>ОСП Павловский СДК</strong></div>
+        <div class="address">391255, Рязанская область, Александро-Невский район, д. Павловка, ул. Центральная д. 48</div>
+        <div class="position">Ведущий методист</div>
+        <div>Ломовицкая Ирина Александровна</div>
+        <div class="schedule">График работы: вторник-суббота с 12:00 до 18:00 и с 16:00 до 22:00 (зимой); с 12:00 до 18:00 и с 17:00 до 23:00 (летом).</div>
+        <div>Выходной: понедельник.</div>
+        <div class="email">Эл. почта: lomovitskaia73@mail.ru</div>
+    </div>
+
+    <div class="organization">
+        <div class="center"><strong>ОСП Студёнковский СДК</strong></div>
+        <div class="address">391254, Рязанская область, Александро-Невский район, с. Студёнки, ул. Молодёжная д. 9а</div>
+        <div class="position">Ведущий методист</div>
+        <div>Райкова Валентина Николаевна</div>
+        <div class="schedule">График работы: вторник-суббота с 10:00 до 16:00 и с 19:00 до 22:00 (зимой); с 10:00 до 16:00 и с 20:00 до 23:00 (летом).</div>
+        <div>Выходной: понедельник.</div>
+        <div class="email">Эл. почта: valyraykova@mail.ru</div>
+    </div>
+
+    <div class="organization">
+        <div class="center"><strong>ОСП Автоклуб №1</strong></div>
+        <div class="address">391240, Рязанская область, Александро-Невский район, р.п. Александро-Невский, ул. Советская, д. 27</div>
+        <div class="position">Заведующий</div>
+        <div>Аксенов Николай Юрьевич</div>
+        <div class="education">Образование: высшее, Московский государственный университет культуры и искусств</div>
+    </div>
+
+    <div class="organization">
+        <div class="center"><strong>ОСП Автоклуб №2</strong></div>
+        <div class="address">391240, Рязанская область, Александро-Невский район, р.п. Александро-Невский, ул. Советская, д. 27</div>
+        <div class="position">Заведующий</div>
+        <div>Овечкина Евгения Викторовна</div>
+        <div class="education">Образование: высшее, Институт бизнеса и управления г. Рязань</div>
+    </div>
+
+    <div class="organization">
+        <div class="center"><strong>ОСП Автоклуб №3</strong></div>
+        <div class="address">391240, Рязанская область, Александро-Невский район, р.п. Александро-Невский, ул. Советская, д. 27</div>
+        <div class="position">Заведующий</div>
+        <div>Тяглик Кирилл Владимирович</div>
+        <div class="education">Образование: высшее, Московский государственный университет культуры и искусств</div>
+    </div>
+
+    <div class="organization">
+        <div class="center"><strong>ОСП Автоклуб №4</strong></div>
+        <div class="address">391240, Рязанская область, Александро-Невский район, р.п. Александро-Невский, ул. Советская, д. 27</div>
+        <div class="position">Заведующий</div>
+        <div>Сидоров Иван Викторович</div>
+        <div class="education">Образование: высшее, Международный институт экономики и права</div>
+    </div>
+    <div style="height: 80px;"></div>
+    <button class="back-button" onclick="window.location.href='main_menu.html';">Назад</button>
+
+</body>
+</html>
