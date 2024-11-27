@@ -19,7 +19,7 @@
             object-fit: cover;
         }
         .back-button {
-            position: absolute; /* Абсолютное позиционирование */
+            position: fixed; /* Абсолютное позиционирование */
             bottom: 20px; /* Отступ от нижней части экрана */
             background-color: #636363; /* Серый цвет фона */
             color: white; /* Цвет текста */
@@ -35,6 +35,7 @@
 </head>
 <body>
     <img src="https://rdk-an.rzn.muzkult.ru/media/2024/03/29/1326740502/struktura.png" alt="Структура МБУК «РДК»">
+    <div style="height: 80px;"></div>
     <button class="back-button" onclick="window.location.href='main_menu.html';">Назад</button>
 </body>
 </html>
