@@ -37,7 +37,16 @@
         .schedule {
             margin-top: 10px;
         }
-
+        .search-container {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .search-container input {
+            padding: 10px;
+            width: 60%;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
         .back-button {
             position: fixed;
             bottom: 20px; /* Отступ от нижней части экрана */
@@ -57,7 +66,13 @@
 
     <h1>Сельские Дома Культуры и Автоклубы</h1>
 
-    <div class="organization">
+    <!-- Поисковая форма -->
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Введите название, адрес или ключевое слово..." oninput="searchOrganizations()">
+    </div>
+
+    <!-- Список организаций -->
+    <div class="organization" data-keywords="Благие Кузьмичёва">
         <div class="center"><strong>ОСП Благовский СДК</strong></div>
         <div class="address">391255, Рязанская область, Александро-Невский район, с. Благие, ул. Центральная д. 2</div>
         <div class="position">Заведующий</div>
@@ -68,7 +83,7 @@
         <div class="email">Эл. почта: svetlana.cuzmicheva2017@yandex.ru</div>
     </div>
 
-    <div class="organization">
+    <div class="organization" data-keywords="Боровковский Раджабова">
         <div class="center"><strong>ОСП Боровковский СДК</strong></div>
         <div class="address">391250, Рязанская область, Александро-Невский район, с. Сергиевский Боровок, ул. Центральная д. 92</div>
         <div class="position">Ведущий методист</div>
@@ -79,7 +94,7 @@
         <div class="email">Эл. почта: borovkovskiy.sdk.65@mail.ru</div>
     </div>
 
-    <div class="organization">
+    <div class="organization" data-keywords="Борисовка Головко">
         <div class="center"><strong>ОСП Борисовский СДК</strong></div>
         <div class="address">391243, Рязанская область, Александро-Невский район, д. Борисовка, ул. Центральная д. 105а</div>
         <div class="position">Заведующий</div>
@@ -91,7 +106,7 @@
         <div class="email">Эл. почта: bor-sdk@mail.ru</div>
     </div>
 
-    <div class="organization">
+    <div class="organization" data-keywords="Бурминка Малиновская">
         <div class="center"><strong>ОСП Бурминский СДК</strong></div>
         <div class="address">391247, Рязанская область, Александро-Невский район, д. Бурминка, ул. Молодежная, д. 6А</div>
         <div class="position">Ведущий методист</div>
@@ -100,7 +115,7 @@
         <div>Выходной: понедельник.</div>
     </div>
 
-    <div class="organization">
+    <div class="organization" data-keywords="Зимарово Ушакова">
         <div class="center"><strong>ОСП Зимаровский СДК</strong></div>
         <div class="address">391244, Рязанская область, Александро-Невский район, с. Зимарово, ул. Заречная д. 50</div>
         <div class="position">Ведущий методист</div>
@@ -111,7 +126,7 @@
         <div class="email">Эл. почта: zimarovosdk@yandex.ru</div>
     </div>
 
-    <div class="organization">
+    <div class="organization" data-keywords="Калинино Перчик">
         <div class="center"><strong>ОСП Калининский СДК</strong></div>
         <div class="address">391251, Рязанская область, Александро-Невский район, с. Калинино, ул. Молодёжная д. 1а</div>
         <div class="position">Заведующий</div>
@@ -122,7 +137,7 @@
         <div class="email">Эл. почта: aksanaperchik@yandex.ru</div>
     </div>
 
-    <div class="organization">
+    <div class="organization" data-keywords="Каширин Коваленко">
         <div class="center"><strong>ОСП Каширинский СДК</strong></div>
         <div class="address">391246, Рязанская область, Александро-Невский район, п. Каширин, ул. Школьная д. 2</div>
         <div class="position">Заведующий</div>
@@ -132,7 +147,7 @@
         <div class="email">Эл. почта: b12.01.64@mail.ru</div>
     </div>
 
-    <div class="organization">
+    <div class="organization" data-keywords="Ленино Черемисина">
         <div class="center"><strong>ОСП Ленинский СДК</strong></div>
         <div class="address">391245, Рязанская область, Александро-Невский район, с. Ленино, ул. Центральная д. 43</div>
         <div class="position">Ведущий методист</div>
@@ -149,7 +164,7 @@
         <div class="email">Эл. почта:lenino_sdk@mail.ru</div>
     </div>
 
-    <div class="organization">
+    <div class="organization" data-keywords="Нижний Якимец Морозова">
         <div class="center"><strong>ОСП Нижнеякимецкий СДК</strong></div>
         <div class="address">391240, Рязанская область, Александро-Невский район, с. Нижний Якимец, ул. Молодёжная д. 17</div>
         <div class="position">Ведущий методист</div>
@@ -160,7 +175,7 @@
         <div class="email">Эл. почта: nizhneyakimetsky.sdk@yandex.ru</div>
     </div>
 
-    <div class="organization">
+    <div class="organization" data-keywords="Павловка Ломовицкая">
         <div class="center"><strong>ОСП Павловский СДК</strong></div>
         <div class="address">391255, Рязанская область, Александро-Невский район, д. Павловка, ул. Центральная д. 48</div>
         <div class="position">Ведущий методист</div>
@@ -170,7 +185,7 @@
         <div class="email">Эл. почта: lomovitskaia73@mail.ru</div>
     </div>
 
-    <div class="organization">
+    <div class="organization" data-keywords="Студёнки Студенки Райкова">
         <div class="center"><strong>ОСП Студёнковский СДК</strong></div>
         <div class="address">391254, Рязанская область, Александро-Невский район, с. Студёнки, ул. Молодёжная д. 9а</div>
         <div class="position">Ведущий методист</div>
@@ -180,7 +195,7 @@
         <div class="email">Эл. почта: valyraykova@mail.ru</div>
     </div>
 
-    <div class="organization">
+    <div class="organization" data-keywords="Александро-Невский Аксенов">
         <div class="center"><strong>ОСП Автоклуб №1</strong></div>
         <div class="address">391240, Рязанская область, Александро-Невский район, р.п. Александро-Невский, ул. Советская, д. 27</div>
         <div class="position">Заведующий</div>
@@ -188,7 +203,7 @@
         <div class="education">Образование: высшее, Московский государственный университет культуры и искусств</div>
     </div>
 
-    <div class="organization">
+    <div class="organization" data-keywords="Александро-Невский Овечкина">
         <div class="center"><strong>ОСП Автоклуб №2</strong></div>
         <div class="address">391240, Рязанская область, Александро-Невский район, р.п. Александро-Невский, ул. Советская, д. 27</div>
         <div class="position">Заведующий</div>
@@ -196,7 +211,7 @@
         <div class="education">Образование: высшее, Институт бизнеса и управления г. Рязань</div>
     </div>
 
-    <div class="organization">
+    <div class="organization" data-keywords="Александро-Невский Тяглик">
         <div class="center"><strong>ОСП Автоклуб №3</strong></div>
         <div class="address">391240, Рязанская область, Александро-Невский район, р.п. Александро-Невский, ул. Советская, д. 27</div>
         <div class="position">Заведующий</div>
@@ -204,7 +219,7 @@
         <div class="education">Образование: высшее, Московский государственный университет культуры и искусств</div>
     </div>
 
-    <div class="organization">
+    <div class="organization" data-keywords="Александро-Невский Сидоров">
         <div class="center"><strong>ОСП Автоклуб №4</strong></div>
         <div class="address">391240, Рязанская область, Александро-Невский район, р.п. Александро-Невский, ул. Советская, д. 27</div>
         <div class="position">Заведующий</div>
@@ -213,6 +228,33 @@
     </div>
     <div style="height: 80px;"></div>
     <button class="back-button" onclick="window.location.href='main_menu.html';">Назад</button>
+
+    <script>
+        // Функция для поиска организаций
+        function searchOrganizations() {
+            // Получаем значение из поисковой строки
+            const searchText = document.getElementById('searchInput').value.toLowerCase();
+            const organizations = document.querySelectorAll('.organization');
+
+            // Проходим по всем организациям
+            organizations.forEach(org => {
+                const keywords = org.getAttribute('data-keywords').toLowerCase();
+                if (keywords.includes(searchText)) {
+                    org.style.display = 'block'; // Показываем совпавшие элементы
+                } else {
+                    org.style.display = 'none'; // Скрываем несовпавшие элементы
+                }
+            });
+        }
+
+        // Показываем все организации при загрузке страницы
+        window.onload = function() {
+            const organizations = document.querySelectorAll('.organization');
+            organizations.forEach(org => {
+                org.style.display = 'block';
+            });
+        };
+    </script>
 
 </body>
 </html>
