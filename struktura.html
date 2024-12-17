@@ -17,6 +17,8 @@
             border-radius: 80px; 
             border: 0px solid #000; 
             object-fit: cover;
+            max-width: 100%; /* Ограничиваем максимальную ширину */
+            max-height: 100%; /* Ограничиваем максимальную высоту */
         }
         .back-button {
             position: fixed; /* Абсолютное позиционирование */
@@ -35,7 +37,7 @@
 </head>
 <body>
     <img src="https://rdk-an.rzn.muzkult.ru/media/2024/03/29/1326740502/struktura.png" alt="Структура МБУК «РДК»">
-    <div style="height: 80px;"></div>
+    <div style="height: 120px;"></div>
     <button class="back-button" onclick="window.location.href='main_menu.html';">Назад</button>
 </body>
 </html>
